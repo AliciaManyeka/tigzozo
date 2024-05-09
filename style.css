@@ -1,0 +1,672 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: "sans";
+  src: url("../josefin sans/JosefinSans-Bold.ttf");
+}
+@font-face {
+  font-family: "sans";
+  src: url("../josefin sans/JosefinSans-Bold.ttf");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --light-theme: white;
+  --dark-theme: black;
+}
+
+.dark {
+  --light-theme: black;
+  --dark-theme: white;
+}
+
+body {
+  background: var(--light-theme);
+  color: var(--dark-theme);
+  position: relative;
+  font-family: "sans";
+}
+
+* {
+  font-family: "sans";
+  font-weight: 900;
+}
+* p {
+  margin: 0;
+}
+
+.pc-nav {
+  display: none;
+  height: 20vh;
+  z-index: 2;
+  width: 100%;
+}
+.pc-nav nav {
+  display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pc-nav nav ul {
+  display: flex;
+  gap: 20px;
+}
+.pc-nav nav ul span {
+  color: purple;
+}
+.pc-nav nav ul .input {
+  visibility: hidden;
+}
+.pc-nav nav ul .label {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.pc-nav nav ul .circle {
+  width: 34px;
+  background-color: white;
+  height: 34px;
+  border-radius: 50%;
+  top: 3px;
+  position: absolute;
+  left: 3px;
+  animation: toggleOff 0.4s linear forwards;
+}
+.pc-nav nav ul .input {
+  visibility: hidden;
+}
+.pc-nav nav ul .label {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.pc-nav nav ul .circle {
+  width: 34px;
+  background-color: white;
+  height: 34px;
+  border-radius: 50%;
+  top: 3px;
+  position: absolute;
+  left: 3px;
+  animation: toggleOff 0.4s linear forwards;
+}
+.pc-nav nav ul .input:checked + .label {
+  background-color: white;
+  color: black;
+}
+.pc-nav nav ul .input:checked + .label .circle {
+  animation: toggleOn 0.4s linear forwards;
+  background-color: black;
+  color: white;
+}
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+@keyframes toggleOff {
+  0% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.pc-nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.mobile-nav {
+  display: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.mobile-nav .hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border: 3px solid rgb(128, 34, 140);
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 50px;
+  border-radius: 5px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 4;
+}
+.mobile-nav .hamburger .lines {
+  height: 3px;
+  width: 40px;
+  background: rgb(128, 34, 140);
+}
+
+.active-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.active-lines .line {
+  transform: rotate(45deg);
+  position: absolute;
+}
+.active-lines .middle {
+  opacity: 0;
+}
+.active-lines .line-2 {
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+.alicia {
+  display: block;
+  margin-left: 100vw;
+  right: 0;
+  top: 0;
+  transition: all 2s ease-in-out;
+}
+
+.banner .container .row {
+  margin: 0;
+}
+.banner .container .row .textSide {
+  gap: 50px;
+}
+.banner .container .row .textSide .text h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+.banner .container .row .textSide .text p {
+  width: 80%;
+  font-size: 20px;
+}
+.banner .container .row .textSide .buttons {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.banner .container .row .textSide .buttons .btn1 button {
+  padding: 5px 5px;
+  background: rgb(128, 34, 140);
+  border: 3px solid rgb(128, 34, 140);
+}
+.banner .container .row .textSide .buttons .btn1 button a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.banner .container .row .textSide .buttons .btn2 button {
+  background: transparent;
+  padding: 5px 5px;
+  border: 3px solid rgb(128, 34, 140);
+}
+.banner .container .row .textSide .buttons .btn2 button a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+.banner .container .row .textSide .iconic .icon {
+  display: flex;
+}
+.banner .container .row .textSide .iconic .icon img {
+  width: 30px;
+  height: 30px;
+}
+.banner .container .row .picSide {
+  padding: 0;
+  display: flex;
+}
+.banner .container .row .picSide img {
+  width: 100%;
+}
+
+.about {
+  margin-top: 3rem;
+}
+.about .container h1 {
+  font-size: 25px;
+  font-weight: 900;
+}
+.about .container .row .right p {
+  width: 80%;
+}
+.about .container .row .right .imageContainer {
+  display: flex;
+}
+.about .container .row .right .imageContainer img {
+  width: 100%;
+}
+.about .container .row .left .picture img {
+  width: 100%;
+}
+.about .container .row .left .picture p {
+  width: 80%;
+}
+.about .container .row .left .picture .btn3 button {
+  background: rgb(128, 34, 140);
+  color: white;
+  border: 2px solid rgb(128, 34, 140);
+  padding: 5px 20px;
+}
+.about .container .row .left .picture .btn3 button a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.Services {
+  margin: 3rem 0;
+}
+.Services .container .row .imageContainer {
+  gap: 5px;
+  display: flex;
+}
+.Services .container .row .imageContainer .image-1 {
+  background-image: url("./image/image 8.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  background-repeat: no-repeat;
+}
+.Services .container .row .imageContainer .image-1 .cupi {
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+.Services .container .row .imageContainer .image-1 .cupi p {
+  color: white;
+  margin: 0;
+  font-size: 25px;
+}
+.Services .container .row .imageContainer .image-1 .square {
+  display: flex;
+  justify-content: right;
+  width: 40px;
+  height: 40px;
+  background: purple;
+}
+.Services .container .row .imageContainer .image-1 .square img {
+  width: 40px;
+  height: 30px;
+}
+.Services .container .row .imageContainer .TEXT {
+  padding: 20px 0;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: purple;
+  color: white;
+}
+.Services .container .row .imageContainer .TEXT ol {
+  font-size: 20px;
+  gap: 20px;
+}
+.Services .container .row .imageContainer .TEXT .X {
+  background: white;
+  height: 40px;
+  width: 40px;
+  align-items: end;
+  display: flex;
+  justify-content: center;
+}
+.Services .container .row .imageContainer .TEXT .X img {
+  width: 40px;
+  height: 40px;
+}
+.Services .container .row .imageContainer .image {
+  background-image: url("./image/image 9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: end;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  display: flex;
+}
+.Services .container .row .imageContainer .image p {
+  font-size: 25px;
+  color: white;
+  margin: 0;
+}
+.Services .container .row .imageContainer .image .cupi {
+  display: flex;
+  gap: 10px;
+}
+.Services .container .row .imageContainer .image .cupi .arrow {
+  display: flex;
+  background: purple;
+  height: 40px;
+  width: 40px;
+}
+.Services .container .row .imageContainer .image .cupi .arrow img {
+  width: 40px;
+  height: 40px;
+}
+
+.forth .container .row {
+  padding: 0 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.forth .container .row .first {
+  gap: 10px;
+  padding: 0;
+}
+.forth .container .row .first p {
+  font-size: 20px;
+  line-height: 1;
+}
+.forth .container .row .first .pTag {
+  width: 80%;
+}
+.forth .container .row .first .imagee {
+  padding: 0;
+  width: 100%;
+  height: 50vh;
+  background: #000;
+  background-image: url("../image/image 10.jpg");
+  background-size: cover;
+  padding: 0;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.forth .container .row .first .imagee .box {
+  display: flex;
+}
+.forth .container .row .first .imagee .box .picc {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background: purple;
+  justify-content: center;
+  align-items: center;
+}
+.forth .container .row .first .imagee .box .picc img {
+  width: 30px;
+  height: 30px;
+}
+.forth .container .row .firstt {
+  padding: 0px;
+  top: 0;
+}
+.forth .container .row .firstt .pic11 {
+  background: yellow;
+  height: 50vh;
+  width: 100%;
+  background-image: url("../image/image 11.jpg");
+  padding: 0px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.forth .container .row .firstt .pic11 .box {
+  display: flex;
+}
+.forth .container .row .firstt .pic11 .box .picc {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background: purple;
+  justify-content: center;
+  align-items: center;
+}
+.forth .container .row .firstt .pic11 .box .picc img {
+  width: 30px;
+  height: 30px;
+}
+.forth .container .row .firstt p {
+  font-size: 20px;
+  line-height: 1;
+}
+.forth .container .row .firstt .pTag2 {
+  width: 80%;
+}
+
+.fifth .container {
+  align-items: center;
+}
+.fifth .container span {
+  font-style: italic;
+}
+.fifth .container .row .shootContainer .pic {
+  display: flex;
+}
+.fifth .container .row .shootContainer img {
+  width: 100%;
+}
+.fifth .container button {
+  border: 2px solid purple;
+  background: purple;
+  color: white;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+.fifth .container p {
+  font-size: 20px;
+}
+
+footer {
+  background: purple;
+  margin-top: 3rem;
+}
+footer .container .row {
+  display: flex;
+}
+footer .container .row .textLogo {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .row .textLogo .logo {
+  width: 100%;
+}
+footer .container .row .textLogo p {
+  font-size: 20px;
+}
+footer .container .row .textLogo .icon {
+  display: flex;
+}
+footer .container .row .text {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .row .text a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+footer .container .row .text6 {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .row .text6 .pic {
+  gap: 20px;
+  display: flex;
+}
+footer .container .row .text6 .pic p {
+  font-size: 20px;
+  margin: 0;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .pc-nav {
+    display: block;
+    top: 0;
+  }
+  .banner .textSide {
+    padding-top: 10rem;
+  }
+  .banner .picSide {
+    gap: 10px;
+  }
+  .banner .picSide img {
+    height: 65vh;
+  }
+  .banner .picSide .top {
+    padding-top: 0;
+  }
+  .banner .picSide .Down {
+    padding-top: 100px;
+  }
+  .about .row {
+    padding: 0 50px;
+  }
+  .about .row .right p {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .about .row .right .pic1 {
+    height: 50%;
+  }
+  .about .row .right .pic2 {
+    height: 50%;
+    padding-top: 8rem;
+  }
+  .about .row .picture img {
+    height: 100%;
+  }
+  .about .row .picture p {
+    font-size: 20px;
+    padding-top: 20px;
+    line-height: 1;
+  }
+  .about .row .picture .btn3 {
+    padding-top: 4px;
+  }
+  .Services .container .row {
+    display: flex;
+    justify-content: center;
+  }
+  .Services .container .row .image {
+    padding: 0;
+  }
+  .Services .container .row .image img {
+    height: 100%;
+    width: 100%;
+  }
+  .forth .first {
+    margin-top: 8rem;
+  }
+  .forth .firstt img {
+    width: 400px;
+  }
+  .fifth {
+    margin: 3rem 0;
+  }
+  .fifth .container {
+    justify-content: center;
+    text-align: center;
+    padding: 80px;
+  }
+  .fifth .container .row {
+    padding: 50px;
+  }
+  .fifth .container .row .shootContainer {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+  }
+  .fifth .container .row .shootContainer .pic {
+    gap: 7px;
+    display: flex;
+  }
+  .fifth .container .row .shootContainer .shoot2 {
+    padding-top: 6rem;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width *//*# sourceMappingURL=style.css.map */
