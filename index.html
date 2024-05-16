@@ -17,7 +17,7 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#"><span>Services</span></a></li>
                 <li><a href="#">Testimonials</a></li>
-                <li> <input type="checkbox" id="dark-mode" class="input" />
+                 <li> <input type="checkbox" id="dark-mode" class="input" />
                     <label for="dark-mode" class="label">
                       <div class="circle"></div><li>
                 
@@ -32,12 +32,51 @@
    </div>
 
     <div class="mobile-nav container">
-    <img src="./image/logo.png" alt="">
-        <div class="hamburger">
-            <div class="lines line"></div>
-            <div class="lines middle"></div>
-            <div class="lines line-2"></div>
-        </div>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"> <img src="./image/logo png.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About us</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li> -->
+                  </ul>
+                  <!-- <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form> -->
+                </div>
+              </div>
+            </div>
+          </nav>
+          
     </div>
 
 
@@ -154,8 +193,10 @@
                  <li>Websites</li>
                  <li>Apps</li>
              </ol>
+             <div class="xx">
+                <div class="X"><img src="./image/cancel.png" alt=""></div>
+             </div>
              
-             <div class="X"><img src="./image/cancel.png" alt=""></div> 
          </div>
     
     
@@ -238,13 +279,15 @@
                         <img src="./image/image 14.jpg" alt=""></div>
                 </div>
 
-<div class="pic col-md-6">
-    <div class="shoot2   ">
-        <img src="./image/image 15.jpg" alt=""></div>
-       <div class="shoot  ">
-        <img src="./image/image 16.jpg" alt=""></div>
-       <div class="shoot2 ">
-        <img src="./image/image 17.jpg" alt=""></div>
+<div class="pic  col-md-6 " id="hide" >
+    
+          <div class="shoot2   ">
+            <img src="./image/image 15.jpg" alt=""></div>
+            <div class="shoot  ">
+             <img src="./image/image 16.jpg" alt=""></div>
+            <div class="shoot2 ">
+             <img src="./image/image 17.jpg" alt=""></div>
+    
 </div>
 
                   
@@ -303,52 +346,120 @@
     </div>
 </footer> -->
 
-
-<footer>
+ 
+<footer class="laptop">
     <div class="container">
         <div class="row">
 
 
-            <div class="textLogo  col-md-4">
-                <div class="logo">
-                                    <img  class="logo" src="./image/logo png.png" alt="">
-                </div>
 
-                <p>Copyright Tigzozo media 2022</p>
-                <p>All rights reserved</p>
-                <div class="icon">
-                    <img src="./image/Icon awesome-facebook-f 1.svg" alt="">
-                    <img src="./image/Icon awesome-instagram.svg" alt="">
-                </div>
-            </div>
-            <div class="text  col-md-2">
-                <h4><u>About us</u></h4>
-                <a href="">Our story</a>
-                <a href="">Our team</a>
-                <a href="">Testimonials</a>
-                <a href="">COVID-19 updates</a>
-            </div>
-            <div class="text  col-md-2 ">
-                <h4><u>Here to help</u></h4>
-                <a href="">Contact us</a>
-                <a href="">Book a session</a>
-                <a href=""> Payment</a>
-            </div>
-            <div class="text6 col-md-4 ">
-                <h4><u>Get in touch</u></h4>
-                <div class="pic">
-                    <img src="./image/Icon material-call.svg" alt="">
-                    <p>Contact us</p></div>
-                <div class="pic">
-                    <img src="./image/Icon material-email.svg" alt="">
-                    
-                   <p>alicia@tigzozomedia.com</p>
-                </div>
-                <div class="pic">
-                    <img src="./image/Icon metro-location.svg" alt="">
-                    <p>132 East street Avondale,Harare</p>
-                </div>
-            </div>
+    <div class="textLogo  col-md-4">
+        <div class="logo">
+                            
+            <img  class="logo" src="./image/logo white.svg" alt="">
+        </div>
+
+        <p>Copyright Tigzozo media 2022</p>
+        <p>All rights reserved</p>
+        <div class="icon">
+            <img src="./image/Icon awesome-facebook-f 1.svg" alt="">
+            <img src="./image/Icon awesome-instagram.svg" alt="">
+        </div>
+    </div>
+    <div class="text  col-md-2">
+        <h4><u>About us</u></h4>
+        <a href="">Our story</a>
+        <a href="">Our team</a>
+        <a href="">Testimonials</a>
+        <a href="">COVID-19 updates</a>
+    </div>
+
+
+
+    <div class="text  col-md-2 hide">
+        <h4><u>Here to help</u></h4>
+        <a href="">Contact us</a>
+        <a href="">Book a session</a>
+        <a href=""> Payment</a>
+    </div>
+    <div class="text6 col-md-4 hide">
+        <h4><u>Get in touch</u></h4>
+        <div class="pic">
+            <img src="./image/Icon material-call.svg" alt="">
+            <p>Contact us</p></div>
+        <div class="pic">
+            <img src="./image/Icon material-email.svg" alt="">
+            
+           <p>alicia@tigzozomedia.com</p>
+        </div>
+        <div class="pic">
+            <img src="./image/Icon metro-location.svg" alt="">
+            <p>132 East street Avondale,Harare</p>
+        </div>
+    </div>
+
+</div>
+        </div>
+    
+
+    
+    
+</footer> 
+
+
+
+<footer class="phone">
+    <div class="container">
+        <div class="row">
+
+<div class="right">
+
+    <div class="textLogo  ">
+        <div class="logo">
+     <img  class="logo" src="./image/logo white.svg" alt="">
+        </div>
+
+        <p>Copyright Tigzozo <br> media 2022</p>
+        <p>All rights reserved</p>
+        <div class="icon">
+            <img src="./image/Icon awesome-facebook-f 1.svg" alt="">
+            <img src="./image/Icon awesome-instagram.svg" alt="">
+        </div>
+    </div>
+    <div class="text  ">
+        <h4><u>About us</u></h4>
+        <a href="">Our story</a>
+        <a href="">Our team</a>
+        <a href="">Testimonials</a>
+        <a href="">COVID-19 updates</a>
+    </div>
+
+</div>
+<div class="left">
+
+    <div class="text   hide">
+        <h4><u>Here to help</u></h4>
+        <a href="">Contact us</a>
+        <a href="">Book a session</a>
+        <a href=""> Payment</a>
+    </div>
+    <div class="text6 col-md-4 hide">
+        <h4><u>Get in touch</u></h4>
+        <div class="pic">
+            <img src="./image/Icon material-call.svg" alt="">
+            <p>Contact us</p></div>
+        <div class="pic">
+            <img src="./image/Icon material-email.svg" alt="">
+            
+           <p>@tigzozomedia.com</p>
+        </div>
+        <div class="pic">
+            <img src="./image/Icon metro-location.svg" alt="">
+            <p>132 East street Avondale,Harare</p>
+        </div>
+    </div>
+
+</div>
         </div>
     
 
@@ -356,5 +467,6 @@
     </div>
 </footer>
     <script src="main.js"></script>
+    <script src="bootstrap\js\bootstrap.bundle.min.js"></script>
 </body>
 </html>

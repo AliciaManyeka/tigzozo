@@ -266,7 +266,7 @@ body{
 
 
 .banner{
-    //margin: 6rem 0;
+    margin: 6rem 0;
     .container{
         .row{
             margin: 0;
@@ -346,6 +346,14 @@ body{
             //background: blue;
             display: flex;
             //gap: 5px;
+
+            .top{
+                padding-top: 0;
+            }
+
+            .Down{
+                padding-top: 100px;
+            }
              img{
                 width: 100%;
                 // height: 14rem;
@@ -353,6 +361,7 @@ body{
             //  .image{
             //     padding: 0;
             //  }
+            
           }
         }
     }
@@ -367,6 +376,7 @@ body{
         h1{
             font-size: 25px;
             font-weight: 900;
+           // padding-top: 4rem;
         }
         .row{
             .right{
@@ -419,13 +429,14 @@ body{
 
 
 .Services{
-    margin: 3rem 0;
+    // margin: 3rem 0;
     .container{
         .row{
             .imageContainer{
                 gap: 5px;
 
                 display: flex;
+                flex-direction: column;
 
                 .image-1{
                     background-image: url("./image/image\ 8.jpg");
@@ -434,6 +445,7 @@ body{
                      align-items: end;
                      justify-content: end;
                      background-repeat: no-repeat;
+                     height: 35rem;
 
 
                      .cupi{
@@ -465,20 +477,27 @@ body{
                   .TEXT
                   {
                  
-                    padding: 20px 0;
-                     gap: 30px;
-                    display: flex;
+                    // padding: 20px 0;
+                    //  gap: 30px;
+                    // display: flex;
                     flex-direction: column;
                    align-items: center;
                    justify-content: center;
                      background: purple;
-                    color: white;
+                    color: #ffffff;
+                    padding-left: 10px;
       
       
                ol{
                        font-size: 20px; 
                        gap: 20px;
+                        list-style: decimal;
                   
+                       }
+                       .xx{
+                        padding-left: 20rem;
+                        padding-top: 10rem;
+                        //padding-bottom: rem;
                        }
                       .X{
                           background: white;
@@ -486,6 +505,7 @@ body{
                           width: 40px;
                           align-items: end;
                           display: flex;
+                         
                           justify-content: center;
                           img{
                               width: 40px;
@@ -505,6 +525,7 @@ body{
                       align-items: end;
                       justify-content: end;
                       display: flex;
+                      height: 35rem;
 
                       p{
                         font-size: 25px;
@@ -646,9 +667,20 @@ body{
 
                     //display: flex;
                    // flex-direction: column;
-.pic{display: flex;}
-                    img{
-                        width: 100%;
+.pic{display: flex;
+
+
+    .shoot2{
+        padding-top: 6rem;
+    }
+
+}
+#hide{
+        display: flex;
+        display: none;
+    }
+                     img{
+                         width: 100%;
                 
                     }
                 
@@ -665,117 +697,123 @@ p{font-size:20px}
         }
     }
 
-    // footer{margin-top: 3rem;
-    //     background:  rgb(128, 34, 140);
-    //     color: white;
-    //     .container{
-    //         padding:  20px;
-    //         .row{
-    //            // gap: 10px;
-    //             .textLogo{
-                   
-    //                .logo{
-    //                 width: 150px;
-    //                 height: 70px;
-    //                }
-    //                p{
-    //                 font-size: 20px;
-    //                 line-height: 1;
-    //                }
-    //                .icon{
-
-    //                 display: flex;
-    //                 gap: 20px;
-    //                 height: 20px;
-    //                }
-    //             }
-
-    //             .text{display: flex;
-    //                 padding-top: 10px;
-    //                 flex-direction: column;
-    //                 a{
-    //                     text-decoration: none;
-    //                     color: white;
-    //                     font-size: 20px;
-    //                 }
-    //             }
-    //             .text6{padding-top: 10px;
-    //                 gap: 10px;
-    //                 display: flex;
-    //                 flex-direction: column;
-    //                 justify-content: end;
-    //               .pic{height: 90%;
-    //                 gap: 10px;
-    //                 display: flex;
-    //                 //justify-content: center;
-    //                 p{
-    //                 //padding-bottom: 6px;
-    //                     color: white;
-    //                     font-size: 20px;
-    //                 }
-                    
-    //               }  
-    //             }
-    //         }
-    //     }
-    // }
-
-
-    
-    footer{
+  
+    .laptop{
+        display: none;
+        padding-top: 1rem;
         background: purple;
-        margin-top: 3rem;
-        .container{
-            .row{
+        color: var(--light-theme);
 
-                display: flex;
-               // padding: 20px 0;
-               // flex-direction: column;
-            //    // gap: 5px;
-            //     justify-content: center;
-            //     justify-content: space-evenly;
-                .textLogo{
-                    display: flex;
-                    flex-direction: column;
-                    .logo{
-                        //height:3rem;
-                        width:100%
-                    }
-                    
-                    p{
-                        font-size: 20px;
-                    }
-                    .icon{
-                        display: flex;
-                        
-                    }
-                }
-                .text{
-                    display: flex;
-                    flex-direction: column;
-                    
-    
-                    a{
-                        text-decoration:none;
-                        font-size: 20px;
-                        color: white;
-                    }
-                }
-                .text6{
-                    display: flex;
-                    flex-direction: column;
-                    .pic{
-                        gap: 20px;
-                        display: flex;
-                        p{font-size: 20px;
-                        margin: 0;}
-                    }
+        .right{
+            padding: 0;
+            display: flex;
+        }
+
+        .hide{
+            display: none;
+        }
+.left{
+    display: flex;
+    //justify-content: space-between;
+    gap: 70px;
+    p{width: 50%;}
+}
+        .textLogo{
+            .logo{
+                img{
+                    height: 6rem;
+
+                    width: 50%;
+                    margin-left: -10px;
                 }
             }
+        }
 
-          
+        .text{
+            display: flex;
+            flex-direction: column;
+            color: var(--light-theme);
+            gap: 7px;
+            a{
+                color: var(--light-theme);
+                text-decoration: none;
+            }
+        }
+
+        .text6{
+            display: flex;
+            flex-direction: column;
+            
+            .pic{
+                display: flex;
+                gap: 5px;
+                align-items: center;
+
+                img{
+                    height: 20px;
+                }
+            }
         }
     }
+
+
+.phone{
+    padding-top: 1rem;
+    background: purple;
+    color: var(--light-theme);
+
+    .right{
+        padding: 0;
+        display: flex;
+    }
+
+    .hide{
+        display: none;
+    }
+.left{
+display: flex;
+//justify-content: space-between;
+gap: 70px;
+p{width: 50%;}
+}
+    .textLogo{
+        //width: 70%;
+        .logo{
+            img{
+                height: 6rem;
+
+                width: 50%;
+                //margin-left: -10px;
+            }
+        }
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        color: var(--light-theme);
+        gap: 7px;
+        a{
+            color: var(--light-theme);
+            text-decoration: none;
+        }
+    }
+
+    .text6{
+        display: flex;
+        flex-direction: column;
+        
+        .pic{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            img{
+                height: 20px;
+            }
+        }
+    }
+}
 /*
 ####################################################
 M E D I A  Q U E R I E S
@@ -801,6 +839,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
 
+
+    .navbar{display :none}
     .mobile-nav{
         display: none;
     }
@@ -814,7 +854,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
 
     .banner{
-
+margin: 3rem 0;
         .textSide{
             padding-top: 10rem;
         }
@@ -875,6 +915,11 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         .container{
            
              .row{
+
+                .imageContainer{
+                    display: flex;
+                    flex-direction: row;
+                
                
                 display:flex;
                 justify-content:center;
@@ -889,6 +934,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
             
                 //height: 80vh;
             }
+            .TEXT{
+                ol{
+                    position: relative;
+                    gap: 30px;
+                }
+                .X{
+                   // position: relative;
+                    
+                }
+            }
+        }
         }
         
     }
@@ -908,9 +964,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         .container{
             justify-content: center;
             text-align: center;
-            padding: 80px;
+            padding: 60px;
             .row
-            {padding: 50px;
+            {
                 .shootContainer{
                    
                     display: flex;
@@ -919,6 +975,19 @@ No media query since this is the default in Bootstrap because it is "mobile firs
                     .pic{
                         gap: 7px;
                         display: flex;
+
+                        // .hide{
+                        //     display: flex;
+                        //     flex-direction: row;
+                        //     display: block;
+                        // }
+                    }
+                    #hide{
+                        display: block;
+                        display: flex;
+                        // img{
+                        //     width: 25%;
+                        // }
                     }
                     .shoot2{
                         padding-top: 6rem;
@@ -929,17 +998,53 @@ No media query since this is the default in Bootstrap because it is "mobile firs
        
         
     }
+.phone{display:none}
 
-//    footer{
-//     .container{color: white;
-//         //display:flex;
-//         display: flex;
-//        // flex-direction: column;
-//         //gap: 10px;
-//         justify-content: center;
-//         justify-content: space-evenly;
-//     }
-//    }
+.laptop{
+    display: block;
+    padding-top: 1rem;
+    background: purple;
+    color: var(--light-theme);
+
+    .hide{
+        display: block;
+    }
+
+    .textlogo{
+        .logo{
+            img{
+                height: 1rem;
+                margin-left: -10px;
+            }
+        }
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        color: var(--light-theme);
+        gap: 7px;
+        a{
+            color: var(--light-theme);
+            text-decoration: none;
+        }
+    }
+
+    .text6{
+        display: flex;
+        flex-direction: column;
+        
+        .pic{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            img{
+                height: 20px;
+            }
+        }
+    }
+}
 }
 
 /* Large devices (desktops, 992px and up) */

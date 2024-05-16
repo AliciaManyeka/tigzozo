@@ -230,6 +230,9 @@ body {
   transition: all 2s ease-in-out;
 }
 
+.banner {
+  margin: 6rem 0;
+}
 .banner .container .row {
   margin: 0;
 }
@@ -280,6 +283,12 @@ body {
   padding: 0;
   display: flex;
 }
+.banner .container .row .picSide .top {
+  padding-top: 0;
+}
+.banner .container .row .picSide .Down {
+  padding-top: 100px;
+}
 .banner .container .row .picSide img {
   width: 100%;
 }
@@ -318,12 +327,10 @@ body {
   font-size: 20px;
 }
 
-.Services {
-  margin: 3rem 0;
-}
 .Services .container .row .imageContainer {
   gap: 5px;
   display: flex;
+  flex-direction: column;
 }
 .Services .container .row .imageContainer .image-1 {
   background-image: url("./image/image 8.jpg");
@@ -332,6 +339,7 @@ body {
   align-items: end;
   justify-content: end;
   background-repeat: no-repeat;
+  height: 35rem;
 }
 .Services .container .row .imageContainer .image-1 .cupi {
   width: -moz-fit-content;
@@ -357,18 +365,21 @@ body {
   height: 30px;
 }
 .Services .container .row .imageContainer .TEXT {
-  padding: 20px 0;
-  gap: 30px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: purple;
-  color: white;
+  color: #ffffff;
+  padding-left: 10px;
 }
 .Services .container .row .imageContainer .TEXT ol {
   font-size: 20px;
   gap: 20px;
+  list-style: decimal;
+}
+.Services .container .row .imageContainer .TEXT .xx {
+  padding-left: 20rem;
+  padding-top: 10rem;
 }
 .Services .container .row .imageContainer .TEXT .X {
   background: white;
@@ -391,6 +402,7 @@ body {
   align-items: end;
   justify-content: end;
   display: flex;
+  height: 35rem;
 }
 .Services .container .row .imageContainer .image p {
   font-size: 25px;
@@ -503,6 +515,13 @@ body {
 .fifth .container .row .shootContainer .pic {
   display: flex;
 }
+.fifth .container .row .shootContainer .pic .shoot2 {
+  padding-top: 6rem;
+}
+.fifth .container .row .shootContainer #hide {
+  display: flex;
+  display: none;
+}
 .fifth .container .row .shootContainer img {
   width: 100%;
 }
@@ -517,46 +536,98 @@ body {
   font-size: 20px;
 }
 
-footer {
+.laptop {
+  display: none;
+  padding-top: 1rem;
   background: purple;
-  margin-top: 3rem;
+  color: var(--light-theme);
 }
-footer .container .row {
+.laptop .right {
+  padding: 0;
   display: flex;
 }
-footer .container .row .textLogo {
+.laptop .hide {
+  display: none;
+}
+.laptop .left {
+  display: flex;
+  gap: 70px;
+}
+.laptop .left p {
+  width: 50%;
+}
+.laptop .textLogo .logo img {
+  height: 6rem;
+  width: 50%;
+  margin-left: -10px;
+}
+.laptop .text {
   display: flex;
   flex-direction: column;
+  color: var(--light-theme);
+  gap: 7px;
 }
-footer .container .row .textLogo .logo {
-  width: 100%;
-}
-footer .container .row .textLogo p {
-  font-size: 20px;
-}
-footer .container .row .textLogo .icon {
-  display: flex;
-}
-footer .container .row .text {
-  display: flex;
-  flex-direction: column;
-}
-footer .container .row .text a {
+.laptop .text a {
+  color: var(--light-theme);
   text-decoration: none;
-  font-size: 20px;
-  color: white;
 }
-footer .container .row .text6 {
+.laptop .text6 {
   display: flex;
   flex-direction: column;
 }
-footer .container .row .text6 .pic {
-  gap: 20px;
+.laptop .text6 .pic {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.laptop .text6 .pic img {
+  height: 20px;
+}
+
+.phone {
+  padding-top: 1rem;
+  background: purple;
+  color: var(--light-theme);
+}
+.phone .right {
+  padding: 0;
   display: flex;
 }
-footer .container .row .text6 .pic p {
-  font-size: 20px;
-  margin: 0;
+.phone .hide {
+  display: none;
+}
+.phone .left {
+  display: flex;
+  gap: 70px;
+}
+.phone .left p {
+  width: 50%;
+}
+.phone .textLogo .logo img {
+  height: 6rem;
+  width: 50%;
+}
+.phone .text {
+  display: flex;
+  flex-direction: column;
+  color: var(--light-theme);
+  gap: 7px;
+}
+.phone .text a {
+  color: var(--light-theme);
+  text-decoration: none;
+}
+.phone .text6 {
+  display: flex;
+  flex-direction: column;
+}
+.phone .text6 .pic {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.phone .text6 .pic img {
+  height: 20px;
 }
 
 /*
@@ -575,12 +646,18 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .navbar {
+    display: none;
+  }
   .mobile-nav {
     display: none;
   }
   .pc-nav {
     display: block;
     top: 0;
+  }
+  .banner {
+    margin: 3rem 0;
   }
   .banner .textSide {
     padding-top: 10rem;
@@ -622,16 +699,22 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .about .row .picture .btn3 {
     padding-top: 4px;
   }
-  .Services .container .row {
+  .Services .container .row .imageContainer {
+    display: flex;
+    flex-direction: row;
     display: flex;
     justify-content: center;
   }
-  .Services .container .row .image {
+  .Services .container .row .imageContainer .image {
     padding: 0;
   }
-  .Services .container .row .image img {
+  .Services .container .row .imageContainer .image img {
     height: 100%;
     width: 100%;
+  }
+  .Services .container .row .TEXT ol {
+    position: relative;
+    gap: 30px;
   }
   .forth .first {
     margin-top: 8rem;
@@ -645,10 +728,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .fifth .container {
     justify-content: center;
     text-align: center;
-    padding: 80px;
-  }
-  .fifth .container .row {
-    padding: 50px;
+    padding: 60px;
   }
   .fifth .container .row .shootContainer {
     display: flex;
@@ -659,8 +739,50 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     gap: 7px;
     display: flex;
   }
+  .fifth .container .row .shootContainer #hide {
+    display: block;
+    display: flex;
+  }
   .fifth .container .row .shootContainer .shoot2 {
     padding-top: 6rem;
+  }
+  .phone {
+    display: none;
+  }
+  .laptop {
+    display: block;
+    padding-top: 1rem;
+    background: purple;
+    color: var(--light-theme);
+  }
+  .laptop .hide {
+    display: block;
+  }
+  .laptop .textlogo .logo img {
+    height: 1rem;
+    margin-left: -10px;
+  }
+  .laptop .text {
+    display: flex;
+    flex-direction: column;
+    color: var(--light-theme);
+    gap: 7px;
+  }
+  .laptop .text a {
+    color: var(--light-theme);
+    text-decoration: none;
+  }
+  .laptop .text6 {
+    display: flex;
+    flex-direction: column;
+  }
+  .laptop .text6 .pic {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .laptop .text6 .pic img {
+    height: 20px;
   }
 }
 /* Large devices (desktops, 992px and up) */
